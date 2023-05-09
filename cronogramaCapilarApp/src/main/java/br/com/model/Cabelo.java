@@ -1,9 +1,9 @@
-package model;
+package br.com.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import enums.*;
+import br.com.enums.*;
 
 @Document(collection = "cabelo")
 public class Cabelo {

@@ -1,4 +1,4 @@
-package enums;
+package br.com.enums;
 
 public enum Estado {
     ARMADO, SEM_BRILHO, RESSECADO,

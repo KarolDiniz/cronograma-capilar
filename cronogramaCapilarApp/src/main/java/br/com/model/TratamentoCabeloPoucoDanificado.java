@@ -1,4 +1,4 @@
-package model;
+package br.com.model;
 
 public class TratamentoCabeloPoucoDanificado extends Tratamento{
 

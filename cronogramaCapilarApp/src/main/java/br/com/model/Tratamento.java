@@ -1,4 +1,4 @@
-package model;
+package br.com.model;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

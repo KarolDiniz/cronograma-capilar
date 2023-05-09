@@ -1,4 +1,4 @@
-package view;
+package br.com.view;
 import java.awt.Color;
 import java.awt.Font;
 //import java.awt.Image;

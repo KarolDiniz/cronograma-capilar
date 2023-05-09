@@ -1,16 +1,15 @@
-package run;
-
-import model.Cabelo;
-import enums.*;
-import model.AnaliseCapilar;
-import view.TelaInicial;
-import view.TelaQuestionario;
+package br.com.run;
 
 import java.util.Scanner;
 import org.springframework.web.client.RestTemplate;
 
-import controller.UserController;
-import model.User;
+import br.com.controller.UserController;
+import br.com.enums.*;
+import br.com.model.AnaliseCapilar;
+import br.com.model.Cabelo;
+import br.com.model.User;
+import br.com.view.TelaInicial;
+import br.com.view.TelaQuestionario;
 
 public class Main {
     public static void main(String[] args) {
@@ -37,7 +36,7 @@ public class Main {
         //User savedUser = restTemplate.postForObject("localhost:27017/api/user/create", user, User.class);
         
         UserController userController = new UserController();
-        userController.createUser(user);
+    //    userController.createUser(user);
         
         System.out.println("Usuário criado com sucesso!");
         System.out.println("ID do usuário: " + user.getId());

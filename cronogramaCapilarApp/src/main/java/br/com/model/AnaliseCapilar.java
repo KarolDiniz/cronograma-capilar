@@ -1,6 +1,6 @@
-package model;
+package br.com.model;
 
-import enums.Estado;
+import br.com.enums.Estado;
 
 public class AnaliseCapilar {
 
@@ -26,6 +26,8 @@ public class AnaliseCapilar {
             case MISTO:
                 hidratacao += 1;
                 break;
+		default:
+			break;
         }
 
         if (cabelo.getEstado().equals(Estado.ARMADO) || cabelo.getEstado().equals(Estado.SEM_BRILHO) || cabelo.getEstado().equals(Estado.RESSECADO)) {

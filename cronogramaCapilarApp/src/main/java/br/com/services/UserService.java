@@ -1,12 +1,15 @@
-package services;
+package br.com.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import model.User;
-import repository.UserRepository;
+import br.com.model.Cabelo;
+import br.com.model.User;
+import br.com.repository.UserRepository;
 
 /* indicação para o Spring que essa classe é um componente de 
  * serviço e deve ser gerenciada automaticamente pelo contêiner do Spring.*/
@@ -23,8 +26,9 @@ public class UserService {
 	@Autowired
 	UserRepository userRepository;
 
-	public User createUser(User user) {
-		return userRepository.save(user);
+	@Transactional
+																																public User createUser(String nome, String email, String password, Cabelo cabelo) {
+		return userRepository.save(new User(nome, email, password, cabelo));
 	}
 	
 	/*
@@ -49,7 +53,6 @@ public class UserService {
 		userRepository.deleteById(id);
 		return "User deletado!";
 	}
-	
 	
 
 }
